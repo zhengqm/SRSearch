@@ -62,7 +62,7 @@ function isSpecial(str){
 function query(collections, queryString){
   var limit = 40
   var query = splitKeyword(queryString)
-  var orArray = []
+  //var orArray = []
   var andArray = []
   for (var i = query.length - 1; i >= 0; i--) {
     if (query[i] == '') {
@@ -73,22 +73,16 @@ function query(collections, queryString){
       andArray.push(testSpecial)
     } else {
       var regEx = new RegExp(query[i], 'ig')
-      orArray.push({prj: regEx})
+      andArray.push({prj: regEx})
     }
   }
 
   /*
-  if(orArray.length == 0){
-    return collections.find({},{limit:limit})
-  } else {
-    return collections.find({$or: orArray}, {limit:limit})
-  }
-  */
-
   if(orArray.length != 0){
     andArray.push({$or: orArray})
   }
-
+  */
+  
   if (andArray.length != 0){
     return collections.find({$and: andArray}, {limit:limit})
   } else {
