@@ -1,5 +1,9 @@
 /* CSS declarations go here */
 
+.container {
+    margin-left: 200px;
+}
+
 #help {
     margin-top: -10px;
     margin-bottom: 30px;
