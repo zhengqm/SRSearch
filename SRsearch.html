@@ -1,0 +1,52 @@
+<head>
+  <title>SRSearch</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Source Repo Search</h1>
+      <form class="form-horizontal">
+      <div class="form-group">
+        <input type="text" class="form-control" id="search-box" placeholder="Type project keyword to search">
+        
+      </div>
+      </form>
+      <div id='help'>
+        <small>Possible options: repo | b_time | e_time | span | vcs | n_cmt | n_peo </small><br>
+        <small>Possible operators:  &gt; | = | &lt; | : </small>
+      </div>
+          {{#each items}}
+            {{> item}}
+          {{/each}}
+
+  </div>
+    
+</body>
+
+<template name="item">
+
+    <dl class="dl-horizontal">
+    <dt>Project</dt>
+    <dd>{{prj}}</dd>
+    <dt>Repository</dt>
+    <dd>{{repo}}</dd>
+    <dt>Time Span</dt>
+    <dd>{{b_time}} - {{e_time}}</dd>
+    <dt>Version Control</dt>
+    <dd>{{vcs}}</dd>
+    <dt># Commit</dt>
+    <dd>{{n_cmt}}</dd>
+    <dt># People</dt>
+    <dd>{{n_peo}}</dd>
+    <dt>Source Location</dt>
+    <dd>{{src_loc}}</dd>
+    <dt>Log Location</dt>
+    <dd>{{log_loc}}</dd>
+
+    <hr>
+
+    </dl>
+
+</template>
