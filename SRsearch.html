@@ -9,8 +9,8 @@
     <h1>Source Repo Search</h1>
       <form class="form-horizontal" onsubmit="return false;">
       <div class="form-group">
-        <input type="text" class="form-control" id="search-box" placeholder="Type project keyword to search">
-        
+        <input type="text" class="form-control" id="search-box" 
+        placeholder="Type project keyword to search">
       </div>
       </form>
       <div id='help'>
@@ -27,27 +27,15 @@
 </body>
 
 <template name="item">
-
     <dl class="dl-horizontal">
-    <dt>Project</dt>
-    <dd>{{prj}}</dd>
-    <dt>Repository</dt>
-    <dd>{{repo}}</dd>
-    <dt>Time Span</dt>
-    <dd>{{b_time}} - {{e_time}}</dd>
-    <dt>Version Control</dt>
-    <dd>{{vcs}}</dd>
-    <dt># Commit</dt>
-    <dd>{{n_cmt}}</dd>
-    <dt># People</dt>
-    <dd>{{n_peo}}</dd>
-    <dt>Source Location</dt>
-    <dd>{{src_loc}}</dd>
-    <dt>Log Location</dt>
-    <dd>{{log_loc}}</dd>
-
+    <dt>Project</dt>            <dd>{{prj}}</dd>
+    <dt>Repository</dt>         <dd>{{repo}}</dd>
+    <dt>Time Span</dt>          <dd>{{b_time}} - {{e_time}}</dd>
+    <dt>Version Control</dt>    <dd>{{vcs}}</dd>
+    <dt># Commit</dt>           <dd>{{n_cmt}}</dd>
+    <dt># People</dt>           <dd>{{n_peo}}</dd>
+    <dt>Source Location</dt>    <dd>{{src_loc}}</dd>
+    <dt>Log Location</dt>       <dd>{{log_loc}}</dd>
     <hr>
-
     </dl>
-
 </template>
